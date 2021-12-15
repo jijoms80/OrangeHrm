@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+
+		<listener
+			class-name="com.orangeHrmLive.qa.utils.CustomListener">
+		</listener>
+		<listener
+			class-name="com.orangeHrmLive.qa.RetryLogic.TransformerForRetry">
+		</listener>
+		<listener
+			class-name="com.orangeHrmLive.qa.utils.ExtentReportListener">
+		</listener>
+
+	</listeners>
+	<test thread-count="5" name="Test">
+		<classes>
+
+			<class name="com.orangeHrmLive.PageTest.LandingPageTest" />
+			<class name="com.orangeHrmLive.PageTest.LeavePageTest" />
+			<class name="com.orangeHrmLive.qa.TestBase.TestBase" />
+			<class name="com.orangeHrmLive.PageTest.AdminPageTest" />
+			<class name="com.orangeHrmLive.PageTest.QualificationPageTest" />
+			<class name="com.orangeHrmLive.PageTest.DashboardPageTest" />
+			<class name="com.orangeHrmLive.PageTest.DirectoryViewPageTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
+
