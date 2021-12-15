@@ -27,9 +27,10 @@ public class AdminPage extends TestBase {
 		adminMenu.click();
 	}
 
-	public void inputEmployeeName(String employee_name) {
+	public void searchEmployee(String employee_name) {
 		employeeName.sendKeys(employee_name);
 		employeeName.sendKeys(Keys.ENTER);
+		clickSearchBtn();
 	}
 
 	public void clickSearchBtn() {

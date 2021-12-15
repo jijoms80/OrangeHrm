@@ -14,8 +14,12 @@ public class DashboardPage extends TestBase {
 
 	@FindBy(xpath = "//*[@id='welcome']")
 	WebElement welcomeBanner;
+
 	@FindBy(id = "menu_admin_viewAdminModule")
 	WebElement adminMenu;
+
+	@FindBy(id = "menu_leave_viewLeaveModule")
+	WebElement leaveMenu;
 
 	public String verifyLoginPageText() {
 		String welcomeBanerText = welcomeBanner.getText();
@@ -25,6 +29,11 @@ public class DashboardPage extends TestBase {
 	public AdminPage clickAdminMenu() {
 		adminMenu.click();
 		return new AdminPage();
+	}
+
+	public LeavePage clickLeaveMenu() {
+		leaveMenu.click();
+		return new LeavePage();
 	}
 
 }
